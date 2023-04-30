@@ -1,0 +1,14 @@
+<div class="ng-autocomplete">
+  <ng-autocomplete
+    [data]="dinos"
+    [searchKeyword]="keyword"
+    placeholder="Search for species..."
+    (selected)="selectDino($event.name)"
+    [itemTemplate]="itemTemplate"
+  >
+  </ng-autocomplete>
+
+  <ng-template #itemTemplate let-item>
+    <a [innerHTML]="item.name"></a>
+  </ng-template>
+</div>
